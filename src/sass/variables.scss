@@ -1,0 +1,106 @@
+// 全局变量
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+$body-font-family: 'cwTeXYen',
+'Varela Round',
+sans-serif;
+$heading-font-family: $body-font-family;
+$pinkTheme: #fb839e;
+$orangeTheme: #ec9412;
+$greenTheme: #1fc586;
+$blueTheme: #2eb1ed;
+$redTheme: #cc3a3b;
+
+// v-btn
+$btn-text-transform: none;
+$btn-outline-border-width: 0;
+$btn-active-opacity: 0;
+
+// v-timeline
+$timeline-line-width: 1px;
+
+body{
+  line-height: 1.5;
+}
+
+.border-outset {
+  border: none;
+  outline: none;
+}
+
+.border-inset {
+  border: none;
+  outline: none;
+}
+
+.morning .border-inset {
+  background-color: #eeeeee;
+  box-shadow: inset 2px 2px 3px #aaaaaa,
+              inset -2px -2px 3px #fefefe;
+}
+.morning .border-outset {
+  background-color: #eeeeee;
+  box-shadow: inset -2px -2px 3px #aaaaaa,
+              inset 2px 2px 3px #fefefe;
+}
+.night .border-outset {
+  background-color: #2b2c2f;
+  box-shadow: inset 2px 2px 3px #666666,
+              inset -2px -2px 3px #000;
+}
+.night .border-inset {
+    background-color: #2b2c2f;
+    box-shadow: inset -2px -2px 3px #666666,
+                inset 2px 2px 3px #000;
+}
+.v-application.pinkTheme .color-change {
+  color: $pinkTheme;
+}
+
+.v-application.orangeTheme .color-change {
+  color: $orangeTheme;
+}
+
+.v-application.greenTheme .color-change {
+  color: $greenTheme;
+}
+
+.v-application.blueTheme .color-change {
+  color: $blueTheme;
+}
+
+.v-application.redTheme .color-change {
+  color: $redTheme;
+}
+
+.morning .v-btn.v-btn--has-bg,
+.morning .v-item-group.v-btn-toggle {
+  background-color: #eeeeee;
+}
+
+.night .v-btn.v-btn--has-bg,
+.night .v-item-group.v-btn-toggle {
+  background-color: #2b2c2f;
+}
+
+.night .font-weight-bold{
+  color: #fff;
+}
+
+.morning .theme--light.v-timeline .v-timeline-item__dot {
+  background: transparent;
+  box-shadow: 0 0 0 1px #aaaaaa;
+}
+
+.night .theme--light.v-timeline .v-timeline-item__dot {
+  background: transparent;
+  box-shadow: 0 0 0 1px #666666;
+}
+
+.morning .theme--light.v-timeline::before {
+  background: #aaaaaa;
+}
+
+.night .theme--light.v-timeline::before {
+  background: #666666;
+}
