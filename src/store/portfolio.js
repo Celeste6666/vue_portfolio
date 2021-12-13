@@ -13,10 +13,10 @@ export default [
     id: 2,
     name: '網站作品集',
     url: '',
-    sourceCode: 'https://github.com/Celeste6666/vue-portfolio',
+    sourceCode: 'https://celeste6666.github.io/vue_portfolio/',
     type: 'Web',
     skill: ['Vue.js', 'Vue-Router', 'Vuex', 'Vuetify'],
-    picture: './toyStore.png',
+    picture: './portfolio.png',
     pictureAlt: '',
   },
   {
