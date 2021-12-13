@@ -1,8 +1,9 @@
 <template>
-  <div class="home px-10">
-    <Banner/>
-    <Intro class="mt-16"/>
-    <Portfolio class="mt-16" />
+  <div class="home px-md-10 px-0">
+    <Banner />
+    <Intro id="about" class="mt-16" />
+    <Portfolio id="portfolio" class="mt-16" />
+    <Contact id="contact" class="mt-16" />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Banner from '@/components/Banner.vue';
 import Intro from '@/components/Intro.vue';
 import Portfolio from '@/components/Portfolio.vue';
+import Contact from '@/components/Contact.vue';
 
 // @ is an alias to /src
 export default {
@@ -18,6 +20,7 @@ export default {
     Banner,
     Intro,
     Portfolio,
+    Contact,
   },
 };
 </script>

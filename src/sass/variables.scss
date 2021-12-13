@@ -40,8 +40,10 @@ body{
 }
 .morning .border-outset {
   background-color: #eeeeee;
-  box-shadow: inset -2px -2px 3px #aaaaaa,
-              inset 2px 2px 3px #fefefe;
+  box-shadow: 2px 2px 3px #bebebe,
+              1px 1px 0px 1px #aaaaaa,
+              -2px -2px 3px #f1eded,
+              inset 1px 1px 0px 1px #f5f5f5;
 }
 .night .border-outset {
   background-color: #2b2c2f;
@@ -58,19 +60,19 @@ body{
 }
 
 .v-application.orangeTheme .color-change {
-  color: $orangeTheme;
+  color: $orangeTheme !important;
 }
 
 .v-application.greenTheme .color-change {
-  color: $greenTheme;
+  color: $greenTheme !important;
 }
 
 .v-application.blueTheme .color-change {
-  color: $blueTheme;
+  color: $blueTheme !important;
 }
 
 .v-application.redTheme .color-change {
-  color: $redTheme;
+  color: $redTheme !important;
 }
 
 .morning .v-btn.v-btn--has-bg,
@@ -103,4 +105,11 @@ body{
 
 .night .theme--light.v-timeline::before {
   background: #666666;
+}
+
+.position-fixed{
+  position: fixed;
+}
+.position-absolute{
+  position: absolute;
 }

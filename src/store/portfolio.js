@@ -1,13 +1,42 @@
-const gitProject = ()=>{
-
-};
-
 export default [
   {
-    name: 'pomodoro',
+    id: 1,
+    name: 'Pomodoro',
+    url: 'https://celeste6666.github.io/pomodoro/view/index.html',
+    sourceCode: 'https://github.com/Celeste6666/pomodoro',
+    type: 'Web',
+    skill: ['js', 'Firebase'],
+    picture: './pomodoro.png',
+    pictureAlt: '',
+  },
+  {
+    id: 2,
+    name: '網站作品集',
     url: '',
-    sourceCode: '',
-    type: 'web application',
-    skill: ['js'],
+    sourceCode: 'https://github.com/Celeste6666/vue-portfolio',
+    type: 'Web',
+    skill: ['Vue.js', 'Vue-Router', 'Vuex', 'Vuetify'],
+    picture: './toyStore.png',
+    pictureAlt: '',
+  },
+  {
+    id: 3,
+    name: '玩具電商',
+    url: 'https://celeste6666.github.io/toystore/',
+    sourceCode: 'https://github.com/Celeste6666/toystore',
+    type: 'E-Commerce',
+    skill: ['Vue.js', 'Vue-Router', 'Vuex', 'ES6', 'scss', 'Firebase'],
+    picture: './toyStore.png',
+    pictureAlt: '',
+  },
+  {
+    id: 4,
+    name: '全台公車動態時刻查詢應用服務',
+    url: 'https://celeste6666.github.io/DynamicBusRoute/',
+    sourceCode: 'https://github.com/Celeste6666/DynamicBusRoute',
+    type: 'Mobile',
+    skill: ['Vue.js', 'Vue-Router', 'Vuex', 'ES6', 'scss'],
+    picture: './DynamicBusRoute.png',
+    pictureAlt: '',
   },
 ];

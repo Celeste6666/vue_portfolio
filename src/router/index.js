@@ -8,15 +8,32 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: Home,
+    children: [
+      {
+        path: '#about',
+      },
+      {
+        path: '#portfolio',
+      },
+      {
+        path: '#contact',
+      },
+    ],
   },
 ];
 
 const router = new VueRouter({
   routes,
+  // eslint-disable-next-line consistent-return
+  scrollBehavior(to) {
+    console.log(to);
+    if (to.hash) {
+      return {
+        selector: to.hash,
+      };
+    }
+  },
 });
 
 export default router;

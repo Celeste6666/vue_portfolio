@@ -1,25 +1,25 @@
 <template>
-<div>
+<div class="d-flex flex-column align-center justify-center">
     <div class="text-caption text-center mt-6 color-change text-uppercase">main info</div>
     <div class="text-h5 text-center font-weight-bold text-uppercase">about me</div>
+    <v-container class="mt-5">
     <v-row
         align="start"
         justify="space-between"
-        class="mt-10"
       >
         <v-col
         md="5" >
         <div
-          class="pa-4 border-inset d-flex align-center justify-center">
+          class="pa-5 border-outset d-flex align-center justify-center"
+          >
           <v-img
-            min-height="320"
-            max-width="320"
             src="../assets/img/avatar.jpg"
           ></v-img>
         </div>
         <div class="mt-3 text-center">
           <v-btn
             class="mx-2 border-outset dark"
+            href=""
             fab
             depressed
             x-small>
@@ -40,6 +40,7 @@
             <v-icon class="grey--text">fab fa-linkedin-in</v-icon>
           </v-btn>
           <v-btn
+            href="https://celeste6666.github.io/Celeste6666/"
             class="mx-2 border-outset dark"
             fab
             depressed
@@ -47,6 +48,7 @@
             <v-icon class="grey--text">fas fa-pencil-alt</v-icon>
           </v-btn>
           <v-btn
+          href="https://github.com/Celeste6666"
             class="mx-2 border-outset dark"
             fab
             depressed
@@ -54,6 +56,7 @@
             <v-icon class="grey--text">fab fa-github-alt</v-icon>
           </v-btn>
           <v-btn
+            href='https://codepen.io/your-work'
             class="mx-2 border-outset dark"
             fab
             depressed
@@ -84,7 +87,8 @@
           </p>
         </v-col>
     </v-row>
-    <div class="mt-15 text-center">
+    </v-container>
+    <div class="d-flex flex-row justify-space-between mt-5">
       <v-btn
         x-small
         rounded
@@ -97,7 +101,7 @@
       {{ tabName }}
       </v-btn>
     </div>
-    <component v-bind:is="currentAboutMeTab" class="mt-5"></component>
+    <component v-bind:is="currentAboutMeTab" class="mt-3"></component>
   </div>
 </template>
 <script>
@@ -113,7 +117,7 @@ export default {
   },
   data() {
     return {
-      aboutMeTab: ['Skills', 'Experience', 'Education'],
+      aboutMeTab: ['Skills', 'Education', 'Experience'],
       currentAboutMeTab: 'Skills',
     };
   },

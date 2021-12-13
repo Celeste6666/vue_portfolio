@@ -1,33 +1,86 @@
 <template>
   <v-app :class="[colorTheme]">
-    <SvgDecoration/>
-    <v-main class="px-md-10" :class="[morning?'morning':'night']">
-      <div class="v-container px-16">
+    <Menu
+      :drawerIsShow="drawerIsShow"
+      :class="[morning ? 'morning' : 'night']"
+      @closeDrawerIsShow="changeDrawerIsShow"
+    />
+    <SvgDecoration />
+    <v-main class="px-md-10" :class="[morning ? 'morning' : 'night']">
+      <div class="v-container px-10">
         <v-toolbar flat color="transparent" class="pa-0">
-        <v-toolbar-title>
-          <router-link to="/" class="color-change text-decoration-none">C</router-link>
-        </v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-btn
-        class="mx-2 border-outset dark"
-        fab
-        depressed
-        small>
-        <v-icon
-        :color="morning?'#000':'#fff'">
-          mdi-menu
-        </v-icon>
-      </v-btn>
-      </v-toolbar>
-      <router-view/>
+          <v-toolbar-title>
+            <router-link to="/" class="color-change text-decoration-none">C</router-link>
+          </v-toolbar-title>
+          <v-spacer></v-spacer>
+          <v-btn
+            class="mx-2 border-outset dark"
+            fab
+            depressed
+            small
+            @pointerup.stop="changeDrawerIsShow"
+          >
+            <v-icon :color="morning ? '#000' : '#fff'"> mdi-menu </v-icon>
+          </v-btn>
+        </v-toolbar>
+
+        <div class="setting d-flex flex-column align-end" v-if="!drawerIsShow">
+          <v-btn-toggle
+            class="border-outset"
+            :class="{ light: morning }"
+            v-model="toggleColor"
+            rounded
+          >
+            <div>
+              <v-btn fab text small>
+                <v-icon @click="colorHidden = !colorHidden" :color="morning ? '#000' : '#fff'"
+                  >mdi-cogs</v-icon
+                >
+              </v-btn>
+            </div>
+            <div v-show="!colorHidden">
+              <v-btn fab text small>
+                <v-icon class="primary--text">mdi-checkbox-blank-circle</v-icon>
+              </v-btn>
+              <v-btn fab text small>
+                <v-icon class="secondary--text">mdi-checkbox-blank-circle</v-icon>
+              </v-btn>
+              <v-btn fab text small>
+                <v-icon class="third--text">mdi-checkbox-blank-circle</v-icon>
+              </v-btn>
+              <v-btn fab text small>
+                <v-icon class="fourth--text">mdi-checkbox-blank-circle</v-icon>
+              </v-btn>
+              <v-btn fab text small>
+                <v-icon class="fifth--text">mdi-checkbox-blank-circle</v-icon>
+              </v-btn>
+            </div>
+          </v-btn-toggle>
+          <v-btn-toggle class="border-outset mt-3" :class="{ light: morning }" rounded>
+            <div>
+              <v-btn v-show="morning" fab text small>
+                <v-icon :color="morning ? '#000' : '#fff'" @click="morning = !morning"
+                  >mdi-weather-night</v-icon
+                >
+              </v-btn>
+              <v-btn v-show="!morning" fab text small>
+                <v-icon :color="morning ? '#000' : '#fff'" @click="morning = !morning"
+                  >mdi-white-balance-sunny
+                </v-icon>
+              </v-btn>
+            </div>
+          </v-btn-toggle>
+        </div>
+        <router-view />
       </div>
     </v-main>
-    <PortfolioFooter :class="['py-5',morning?'morning':'night']" />
+    <PortfolioFooter :class="['py-5', morning ? 'morning' : 'night']" />
   </v-app>
 </template>
 <script>
 import SvgDecoration from '@/components/SvgDecoration.vue';
 import PortfolioFooter from '@/components/Footer.vue';
+import Menu from '@/components/Menu.vue';
 
 export default {
   name: 'App',
@@ -35,31 +88,64 @@ export default {
   components: {
     SvgDecoration,
     PortfolioFooter,
+    Menu,
   },
 
-  data: () => ({
-    //
-  }),
+  data() {
+    return {
+      drawerIsShow: false,
+      colorHidden: true,
+    };
+  },
   computed: {
-    morning() {
-      return this.$store.state.classList.bgMorning;
-    },
     colorTheme() {
       return this.$store.state.classList.colorTheme;
+    },
+    morning: {
+      get() {
+        return this.$store.state.classList.bgMorning;
+      },
+      set() {
+        this.$store.commit('changeMorning');
+      },
+    },
+    toggleColor: {
+      get() {
+        return this.$store.state.colorChosen;
+      },
+      set(newVal) {
+        if (newVal === 0) return;
+        this.$store.commit('changeColor', newVal);
+        this.colorHidden = !this.colorHidden;
+      },
+    },
+  },
+  methods: {
+    changeDrawerIsShow() {
+      this.drawerIsShow = !this.drawerIsShow;
     },
   },
 };
 </script>
 <style lang="scss">
-.morning{
-  background: #EEEEEE;
+.v-application {
+  overflow: hidden;
+}
+.morning {
+  background: #eeeeee;
 }
 
-.night{
+.night {
   background: #2b2c2f;
 }
 
-.v-toolbar__content{
+.v-toolbar__content {
   padding: 0 !important;
+}
+.setting {
+  position: fixed;
+  z-index: 1000;
+  right: 10px;
+  top: 80px;
 }
 </style>

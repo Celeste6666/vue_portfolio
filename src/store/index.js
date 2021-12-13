@@ -6,6 +6,11 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    api: {
+      email_user_id: process.env.VUE_APP_EMAIL_USER_ID,
+      email_template_id: process.env.VUE_APP_EMAIL_TEMPLATE_ID,
+      email_service_id: process.env.VUE_APP_EMAIL_SERVICE_ID,
+    },
     classList: {
       navbarOpen: false,
       bgMorning: true,
@@ -42,6 +47,6 @@ export default new Vuex.Store({
       state.classList.bgMorning = !state.classList.bgMorning;
     },
   },
-  actions: {},
-  modules: {},
+  actions: {
+  },
 });
