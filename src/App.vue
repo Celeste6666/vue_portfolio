@@ -9,16 +9,16 @@
     <v-main class="px-md-10" :class="[morning ? 'morning' : 'night']">
       <div class="v-container px-10">
         <v-toolbar flat color="transparent" class="pa-0">
-          <v-toolbar-title>
-            <router-link to="/" class="color-change text-decoration-none">C</router-link>
-          </v-toolbar-title>
+          <router-link to="/" class="mt-8">
+            <v-img max-width="120" src="@/assets/logo.png"></v-img>
+          </router-link>
           <v-spacer></v-spacer>
           <v-btn
             class="mx-2 border-outset dark"
             fab
             depressed
             small
-            @pointerup.stop="changeDrawerIsShow"
+            @pointerup.stop="changeDrawerIsShow(true)"
           >
             <v-icon :color="morning ? '#000' : '#fff'"> mdi-menu </v-icon>
           </v-btn>
@@ -121,8 +121,8 @@ export default {
     },
   },
   methods: {
-    changeDrawerIsShow() {
-      this.drawerIsShow = !this.drawerIsShow;
+    changeDrawerIsShow(val) {
+      this.drawerIsShow = val;
     },
   },
 };

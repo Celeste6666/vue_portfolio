@@ -38,14 +38,14 @@ export default {
   methods: {
     closeDrawerIsShow() {
       if (this.$route.hash === '') {
-        this.$emit('closeDrawerIsShow');
+        this.$emit('closeDrawerIsShow', false);
       }
     },
   },
   watch: {
     $route(newVal, oldVal) {
       if (newVal.hash !== oldVal.hash) {
-        this.$emit('closeDrawerIsShow');
+        this.$emit('closeDrawerIsShow', false);
       }
     },
   },

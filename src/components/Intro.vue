@@ -73,12 +73,15 @@
           在一個陽光明媚的日子裡，我突然想要學習第二技能 ─ 網頁製作，也就此踏入了前端<span class="text-decoration-line-through">這條不歸路</span>，學習前端到現在，我喜歡上這種需要不斷學習才能跟上世界的狀態，而且永遠不怕沒資源去學習前端(感謝世界上無私奉獻的前輩們)。</p>
           <p>
           <v-btn
+            href="./CV.pdf"
+            target="_blank"
               small
               rounded
               class="color-change border-outset">
               Download CV
           </v-btn>
           <v-btn
+            to="/#contact"
               small
               rounded
               class="ml-5 color-change border-outset">
