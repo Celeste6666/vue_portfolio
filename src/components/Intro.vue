@@ -17,28 +17,13 @@
           ></v-img>
         </div>
         <div class="mt-3 text-center">
-          <v-btn
-            class="mx-2 border-outset dark"
-            href=""
-            fab
-            depressed
-            x-small>
-            <v-icon class="grey--text">fab fa-facebook-f</v-icon>
-          </v-btn>
-          <v-btn
-            class="mx-2 border-outset dark"
-            fab
-            depressed
-            x-small>
-            <v-icon class="grey--text">fab fa-instagram</v-icon>
-          </v-btn>
-          <v-btn
+          <!-- <v-btn
             class="mx-2 border-outset dark"
             fab
             depressed
             x-small>
             <v-icon class="grey--text">fab fa-linkedin-in</v-icon>
-          </v-btn>
+          </v-btn> -->
           <v-btn
             href="https://celeste6666.github.io/Celeste6666/"
             class="mx-2 border-outset dark"
