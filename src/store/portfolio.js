@@ -1,7 +1,7 @@
 export default [
   {
     id: 1,
-    name: 'Pomodoro',
+    name: 'Web Pomodoro',
     url: 'https://celeste6666.github.io/pomodoro/view/index.html',
     sourceCode: 'https://github.com/Celeste6666/pomodoro',
     type: 'Web',
@@ -12,8 +12,8 @@ export default [
   {
     id: 2,
     name: 'Vue 網站作品集',
-    url: '',
-    sourceCode: 'https://celeste6666.github.io/vue_portfolio/',
+    url: 'https://celeste6666.github.io/vue_portfolio/',
+    sourceCode: 'https://github.com/Celeste6666/vue_portfolio',
     type: 'Web',
     skill: ['Vue.js', 'Vue-Router', 'Vuex', 'Vuetify'],
     picture: './portfolio.png',
