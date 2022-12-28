@@ -3,8 +3,8 @@
     <v-row align="center" justify="space-between" no-gutters class="mt-10">
       <v-col class="text-center text-md-start">
         <p class="text-subtitle-1 grey--text text--lighten-1">Hello</p>
-        <p class="text-h3 font-weight-bold">I'm Celeste</p>
-        <p class="grey--text text-h6 text--lighten-1">Fronted-Engineer</p>
+        <p class="text-h2 font-weight-bold">I'm Celeste</p>
+        <p class="grey--text text-h5 text--lighten-1">Fronted-Engineer</p>
       </v-col>
       <v-col>
         <div class="pa-4 border-inset rounded-circle">

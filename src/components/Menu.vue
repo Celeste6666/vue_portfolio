@@ -3,30 +3,40 @@
     class="drawer position-fixed d-flex flex-column justify-center align-center"
     v-if="drawerIsShow"
   >
-    <v-btn
-      class="ma-2 text-uppercase grey--text border-outset close"
-      fab
-      x-small
-      @pointerup="closeDrawerIsShow"
-    >
-      <v-icon>fas fa-times</v-icon>
+    <v-btn class="ma-2 text-uppercase grey--text border-outset close" fab x-small>
+      <v-icon @click="closeDrawerIsShow">fas fa-times</v-icon>
     </v-btn>
     <v-btn
       to="/"
       class="ma-2 px-6 text-uppercase color-change border-outset"
       rounded
-      @pointerup="closeDrawerIsShow"
+      @click="closeDrawerIsShow"
     >
       home
     </v-btn>
-    <v-btn to="/#about" class="ma-2 px-6 text-uppercase color-change border-outset" rounded>
+    <v-btn
+      to="/#about"
+      class="ma-2 px-6 text-uppercase color-change border-outset"
+      rounded
+      @click="closeDrawerIsShow"
+    >
       about
     </v-btn>
-    <v-btn to="/#portfolio" class="ma-2 px-6 text-uppercase color-change border-outset" rounded>
+    <v-btn
+      to="/#portfolio"
+      class="ma-2 px-6 text-uppercase color-change border-outset"
+      rounded
+      @click="closeDrawerIsShow"
+    >
       portfolio
     </v-btn>
 
-    <v-btn to="/#contact" class="ma-2 px-6 text-uppercase color-change border-outset" rounded>
+    <v-btn
+      to="/#contact"
+      class="ma-2 px-6 text-uppercase color-change border-outset"
+      rounded
+      @click="closeDrawerIsShow"
+    >
       contact
     </v-btn>
   </div>
@@ -37,16 +47,7 @@ export default {
   props: ['drawerIsShow'],
   methods: {
     closeDrawerIsShow() {
-      if (this.$route.hash === '') {
-        this.$emit('closeDrawerIsShow', false);
-      }
-    },
-  },
-  watch: {
-    $route(newVal, oldVal) {
-      if (newVal.hash !== oldVal.hash) {
-        this.$emit('closeDrawerIsShow', false);
-      }
+      this.$emit('closeDrawerIsShow', false);
     },
   },
 };

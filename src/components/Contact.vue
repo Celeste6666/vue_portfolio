@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="text-caption text-center mt-6 color-change text-uppercase">contact</div>
-    <div class="text-h5 text-center font-weight-bold text-uppercase">get in touch</div>
+    <div class="text-subtitle-1 text-center mt-6 color-change text-uppercase">contact</div>
+    <div class="text-h4 text-center font-weight-bold text-uppercase">get in touch</div>
     <v-container class="mt-5">
       <v-row>
         <v-col cols="12" md="4">

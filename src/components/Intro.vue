@@ -1,110 +1,102 @@
 <template>
-<div class="d-flex flex-column align-center justify-center">
-    <div class="text-caption text-center mt-6 color-change text-uppercase">main info</div>
-    <div class="text-h5 text-center font-weight-bold text-uppercase">about me</div>
+  <div class="d-flex flex-column align-center justify-center">
+    <div class="text-subtitle-1 text-center mt-6 color-change text-uppercase">main info</div>
+    <div class="text-h4 text-center font-weight-bold text-uppercase">about me</div>
     <v-container class="mt-5">
-    <v-row
-        align="start"
-        justify="space-between"
-      >
-        <v-col
-        md="5" >
-        <div
-          class="pa-5 border-outset d-flex align-center justify-center"
-          >
-          <v-img
-            src="../assets/img/avatar.jpg"
-          ></v-img>
-        </div>
-        <div class="mt-3 text-center">
-          <v-btn
-            class="mx-2 border-outset dark"
-            href=""
-            fab
-            depressed
-            x-small>
-            <v-icon class="grey--text">fab fa-facebook-f</v-icon>
-          </v-btn>
-          <v-btn
-            class="mx-2 border-outset dark"
-            fab
-            depressed
-            x-small>
-            <v-icon class="grey--text">fab fa-instagram</v-icon>
-          </v-btn>
-          <v-btn
-            class="mx-2 border-outset dark"
-            fab
-            depressed
-            x-small>
-            <v-icon class="grey--text">fab fa-linkedin-in</v-icon>
-          </v-btn>
-          <v-btn
-            href="https://celeste6666.github.io/Celeste6666/"
-            class="mx-2 border-outset dark"
-            fab
-            depressed
-            x-small>
-            <v-icon class="grey--text">fas fa-pencil-alt</v-icon>
-          </v-btn>
-          <v-btn
-          href="https://github.com/Celeste6666"
-            class="mx-2 border-outset dark"
-            fab
-            depressed
-            x-small>
-            <v-icon class="grey--text">fab fa-github-alt</v-icon>
-          </v-btn>
-          <v-btn
-            href='https://codepen.io/your-work'
-            class="mx-2 border-outset dark"
-            fab
-            depressed
-            x-small>
-            <v-icon class="grey--text">fab fa-codepen</v-icon>
-          </v-btn>
-        </div>
+      <v-row align="start" justify="space-between">
+        <v-col md="5">
+          <div class="pa-5 border-outset d-flex align-center justify-center">
+            <v-img src="../assets/img/avatar.jpg"></v-img>
+          </div>
+          <div class="mt-3 text-center">
+            <!-- <v-btn class="mx-2 border-outset dark" href="" fab depressed x-small>
+              <v-icon class="grey--text">fab fa-facebook-f</v-icon>
+            </v-btn>
+            <v-btn class="mx-2 border-outset dark" fab depressed x-small>
+              <v-icon class="grey--text">fab fa-instagram</v-icon>
+            </v-btn> -->
+            <v-btn
+              class="mx-2 border-outset dark"
+              fab
+              depressed
+              x-small
+              href="https://www.linkedin.com/in/jouchun-kuo-ab08851b1/"
+            >
+              <v-icon class="grey--text">fab fa-linkedin-in</v-icon>
+            </v-btn>
+            <v-btn
+              href="https://celeste6666.github.io/Celeste6666/"
+              class="mx-2 border-outset dark"
+              fab
+              depressed
+              x-small
+            >
+              <v-icon class="grey--text">fas fa-pencil-alt</v-icon>
+            </v-btn>
+            <v-btn
+              href="https://github.com/Celeste6666"
+              class="mx-2 border-outset dark"
+              fab
+              depressed
+              x-small
+            >
+              <v-icon class="grey--text">fab fa-github-alt</v-icon>
+            </v-btn>
+            <v-btn
+              href="https://codepen.io/your-work"
+              class="mx-2 border-outset dark"
+              fab
+              depressed
+              x-small
+            >
+              <v-icon class="grey--text">fab fa-codepen</v-icon>
+            </v-btn>
+          </div>
         </v-col>
-        <v-col
-        md="7" class="d-flex flex-column">
+        <v-col md="7" class="d-flex flex-column">
           <!--eslint-disable-next-line-->
-          <p class="grey--text">一個在警察行業闖蕩 6 年的小女子，多年工作經驗讓我學會了遇事須沉著冷靜，並且知道創造自我價值的重要性。</br>
-          <!--eslint-disable-next-line-->
-          在一個陽光明媚的日子裡，我突然想要學習第二技能 ─ 網頁製作，也就此踏入了前端<span class="text-decoration-line-through">這條不歸路</span>，學習前端到現在，我喜歡上這種需要不斷學習才能跟上世界的狀態，而且永遠不怕沒資源去學習前端(感謝世界上無私奉獻的前輩們)。</p>
+          <p
+            class="text-subtitle-1"
+            :class="[morning ? 'grey--text text--darken-3' : 'grey--text text--lighten-1']"
+          >
+            【不斷學習與進步】<br />
+            透過自學並利用不同的前端框架完成過多個電商作品及後台管理介面，並熟悉前後端資料串接技術，目前正進一步的學習
+            TypeScript 及 Java。<br />
+            【適應環境能力佳、抗壓能力強、團隊合作能力佳】<br />
+            過往的經歷造就了高超的團隊合作能力及抗壓能力，在工作期間與同事相處融洽。<br />
+            【冷靜成著處理事情的態度】<br />
+            在警察行業中遇到過千奇百怪的事情，也因此學會了冷靜處理事情的重要性。<br />
+          </p>
           <p>
-          <v-btn
-            href="./CV.pdf"
-            target="_blank"
-              small
-              rounded
-              class="color-change border-outset">
+            <v-btn href="./CV.pdf" target="_blank" small rounded class="color-change border-outset">
               Download CV
-          </v-btn>
-          <v-btn
-            to="/#contact"
-              small
-              rounded
-              class="ml-5 color-change border-outset">
+            </v-btn>
+            <v-btn to="/#contact" small rounded class="ml-5 color-change border-outset">
               Hire Me
-          </v-btn>
+            </v-btn>
           </p>
         </v-col>
-    </v-row>
+      </v-row>
+      <div class="d-flex flex-row justify-center mt-5">
+        <v-btn
+          x-small
+          rounded
+          v-for="tabName of aboutMeTab"
+          :key="tabName"
+          :class="[
+            'color-change',
+            'text-capitalize',
+            'mx-3',
+            'pa-3',
+            currentAboutMeTab === tabName ? 'border-inset' : 'border-outset',
+          ]"
+          @click.prevent="currentAboutMeTab = tabName"
+        >
+          {{ tabName }}
+        </v-btn>
+      </div>
+      <component v-bind:is="currentAboutMeTab" class="mt-3"></component>
     </v-container>
-    <div class="d-flex flex-row justify-space-between mt-5">
-      <v-btn
-        x-small
-        rounded
-        v-for="tabName of aboutMeTab"
-        :key="tabName"
-        :class="['color-change', 'text-capitalize','mx-3', 'pa-3',
-        currentAboutMeTab===tabName? 'border-inset': 'border-outset']"
-        @click.prevent="currentAboutMeTab=tabName"
-      >
-      {{ tabName }}
-      </v-btn>
-    </div>
-    <component v-bind:is="currentAboutMeTab" class="mt-3"></component>
   </div>
 </template>
 <script>
@@ -124,7 +116,13 @@ export default {
       currentAboutMeTab: 'Skills',
     };
   },
+  computed: {
+    morning: {
+      get() {
+        return this.$store.state.classList.bgMorning;
+      },
+    },
+  },
 };
 </script>
-<style lang="scss">
-</style>
+<style lang="scss"></style>

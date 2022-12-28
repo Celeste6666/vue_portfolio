@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex flex-column align-center justify-center">
-    <div class="text-caption mt-6 color-change text-uppercase">portfolio</div>
-    <div class="text-h5 font-weight-bold text-uppercase">lastest work</div>
+    <div class="text-subtitle-1 mt-6 color-change text-uppercase">portfolio</div>
+    <div class="text-h4 font-weight-bold text-uppercase">lastest work</div>
     <div class="ma-5 d-flex flex-row justify-space-between">
       <v-btn
         x-small

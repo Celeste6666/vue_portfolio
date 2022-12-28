@@ -84,13 +84,11 @@ import Menu from '@/components/Menu.vue';
 
 export default {
   name: 'App',
-
   components: {
     SvgDecoration,
     PortfolioFooter,
     Menu,
   },
-
   data() {
     return {
       drawerIsShow: false,
@@ -130,13 +128,6 @@ export default {
 <style lang="scss">
 .v-application {
   overflow: hidden;
-}
-.morning {
-  background: #eeeeee;
-}
-
-.night {
-  background: #2b2c2f;
 }
 
 .v-toolbar__content {
