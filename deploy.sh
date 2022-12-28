@@ -20,6 +20,6 @@ git commit -m '作品集更新'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # 部署到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:Celeste6666/vue_portfolio.git master:main
+git push https://github.com/Celeste6666/vue_portfolio.git master:main
 
 cd -
