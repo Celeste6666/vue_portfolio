@@ -56,7 +56,7 @@ export default [
     sourceCode: 'https://github.com/Celeste6666/scrum/tree/master',
     type: 'Web',
     skill: ['React', 'Redux', 'React-Router', 'ES6', 'Tailwind CSS'],
-    picture: './scrum.png',
+    picture: './scrum.jpg',
     pictureAlt: '',
   },
 ];

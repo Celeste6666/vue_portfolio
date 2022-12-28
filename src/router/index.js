@@ -27,7 +27,6 @@ const router = new VueRouter({
   routes,
   // eslint-disable-next-line consistent-return
   scrollBehavior(to) {
-    console.log(to);
     if (to.hash) {
       return {
         selector: to.hash,
