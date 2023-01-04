@@ -56,7 +56,7 @@
         <v-col md="7" class="d-flex flex-column">
           <!--eslint-disable-next-line-->
           <p
-            class="text-subtitle-1"
+            class="text-h5"
             :class="[morning ? 'grey--text text--darken-3' : 'grey--text text--lighten-1']"
           >
             【不斷學習與進步】<br />
