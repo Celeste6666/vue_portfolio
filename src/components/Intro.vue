@@ -68,7 +68,7 @@
             在警察行業中遇到過千奇百怪的事情，也因此學會了冷靜處理事情的重要性。<br />
           </p>
           <p>
-            <v-btn href="./CV.pdf" target="_blank" small rounded class="color-change border-outset">
+            <v-btn href="https://raw.githubusercontent.com/Celeste6666/CV/f8a679bd1f50a89e0dde3c3950521723924d0833/CV.pdf" target="_blank" small rounded class="color-change border-outset">
               Download CV
             </v-btn>
             <v-btn to="/#contact" small rounded class="ml-5 color-change border-outset">
