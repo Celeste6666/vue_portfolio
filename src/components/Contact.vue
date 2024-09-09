@@ -8,8 +8,8 @@
           <div class="pa-4 border-outset text-center pa-3 card">
             <v-icon large class="color-change">fab fa-line</v-icon>
             <p class="my-3 text-caption text-md-body1 text-center grey--text">
-              Line<br />
-              ID: kuojouchun
+              WhatsApp<br />
+              ID: +1 7052499893359
             </p>
           </div>
         </v-col>
@@ -17,7 +17,7 @@
           <div class="pa-4 border-outset text-center pa-3 card">
             <v-icon large class="color-change">fas fa-envelope</v-icon>
             <p class="my-3 text-caption text-md-body1 grey--text">
-              電子信箱<br />
+              Email<br />
               aafree2014@gmail.com
             </p>
           </div>
@@ -26,8 +26,8 @@
           <div class="pa-4 border-outset text-center pa-3 card">
             <v-icon large class="color-change">fas fa-phone</v-icon>
             <p class="my-3 text-caption text-md-body1 grey--text">
-              電話號碼<br />
-              0928-019348
+              Phone<br />
+              +01 (705)2499893359
             </p>
           </div>
         </v-col>
@@ -41,7 +41,7 @@
               v-model="email.from_name"
               class="contact_msg_input border-outset px-3 py-2 color-change my-6"
             />
-            <label class="contact_msg_label grey--text">姓名</label>
+            <label class="contact_msg_label grey--text">Name</label>
           </div>
           <div class="contact_msg d-flex align-center color-change">
             <input
@@ -49,7 +49,7 @@
               v-model="email.from_email"
               class="contact_msg_input border-outset px-3 py-2 color-change my-6"
             />
-            <label class="contact_msg_label grey--text">電子信箱</label>
+            <label class="contact_msg_label grey--text">Email</label>
           </div>
           <div class="contact_msg d-flex align-center color-change">
             <input
@@ -57,7 +57,7 @@
               class="contact_msg_input border-outset px-3 py-2 color-change my-6"
               v-model="email.subject_message"
             />
-            <label class="contact_msg_label grey--text">主題</label>
+            <label class="contact_msg_label grey--text">Subject</label>
           </div>
         </v-col>
         <v-col cols="12" md="6">
@@ -69,7 +69,7 @@
             cols="30"
             rows="4"
             v-model="email.message"
-            placeholder="有任何問題都可以來信喔！"
+            placeholder="If you have any questions, feel free to contact me!"
           ></textarea>
         </v-col>
       </v-row>
@@ -79,7 +79,7 @@
           class="ms-auto px-5 border-outset color-change"
           :disabled="email.subject_message === ''"
           @pointerup.stop="sendEmail"
-          >寄出您的信</v-btn
+          >Submit</v-btn
         >
       </div>
     </v-container>

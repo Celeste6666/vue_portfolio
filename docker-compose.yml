@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  vue:
+    build: .
+    container_name: Node14
+    volumes:
+      - .:/usr/app/vue_portfolio
+    ports:
+      - 8080:8080
+    tty: true

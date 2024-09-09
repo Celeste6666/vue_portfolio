@@ -1,26 +1,32 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
+import PortfolioProjectCompany from "../views/PortfolioProjectCompany.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
+    path: "/",
+    name: "Home",
     component: Home,
     children: [
       {
-        path: '#about',
+        path: "#about"
       },
       {
-        path: '#portfolio',
+        path: "#portfolio"
       },
       {
-        path: '#contact',
-      },
-    ],
+        path: "#contact"
+      }
+    ]
   },
+  {
+    path: "/project/:id",
+    name: "Project",
+    component: PortfolioProjectCompany
+  }
 ];
 
 const router = new VueRouter({
@@ -29,10 +35,10 @@ const router = new VueRouter({
   scrollBehavior(to) {
     if (to.hash) {
       return {
-        selector: to.hash,
+        selector: to.hash
       };
     }
-  },
+  }
 });
 
 export default router;

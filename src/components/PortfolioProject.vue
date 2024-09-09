@@ -29,10 +29,14 @@
                   target="_blank"
                   small
                   rounded
-                  >原始碼</v-btn
+                  v-if="portfolio.sourceCode"
+                  >Source Code</v-btn
+                >
+                <v-btn v-else color="mx-2 color-change" :to="`/project/${portfolio.id}`" small rounded
+                  >Description</v-btn
                 >
                 <v-btn color="mx-2 color-change" :href="portfolio.url" target="_blank" small rounded
-                  >線上連結</v-btn
+                  >Link</v-btn
                 >
               </v-overlay>
             </div>
