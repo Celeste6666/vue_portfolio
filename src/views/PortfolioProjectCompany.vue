@@ -47,22 +47,24 @@ export default {
   <v-container class="mt-5">
     <v-row align="start" justify="space-between">
       <v-col md="7">
-        <div class="border-outset ">
+        <div class="border-outset">
           <v-carousel show-arrows="hover" :interval="10000" cycle hide-delimiter-background>
             <template v-slot:prev="{ on, attrs }">
-              <v-btn class="ma-1" outlined fab color="white" v-bind="attrs" v-on="on">
+              <v-btn class="ma-1" small outlined fab color="white" v-bind="attrs" v-on="on">
                 <v-icon> fas fa-arrow-left</v-icon>
 
               </v-btn>
             </template>
             <template v-slot:next="{ on, attrs }">
-              <v-btn class="ma-1" outlined fab color="white" v-bind="attrs" v-on="on"> <v-icon> fas
+              <v-btn class="ma-1" small outlined fab color="white" v-bind="attrs" v-on="on"> <v-icon>
+                  fas
                   fa-arrow-right</v-icon></v-btn>
             </template>
             <v-carousel-item v-for="slide in project.pictureList" :key="slide">
-              <v-sheet height="100%" class="position-relative">
-                <v-img :class="['align-center position-absolute']" :src="slide" :alt="project.pictureAlt" />
-              </v-sheet>
+              <div class="pa-5">
+                <!-- <v-img :class="['align-center position-absolute']" :src="slide" :alt="project.pictureAlt" /> -->
+                <v-img height="440" src="../assets/blackball.png"></v-img>
+              </div>
             </v-carousel-item>
           </v-carousel>
 
@@ -97,5 +99,15 @@ export default {
 .theme--dark.v-btn--active:before,
 .theme--dark.v-btn--active:hover:before {
   opacity: .3 !important;
+}
+
+.morning .v-carousel__controls__item {
+  color: #666 !important;
+  width: 16px !important;
+  height: 16px !important;
+
+  .v-icon {
+      font-size: 10px !important;
+    }
 }
 </style>
