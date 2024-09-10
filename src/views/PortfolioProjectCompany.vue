@@ -62,8 +62,8 @@ export default {
             </template>
             <v-carousel-item v-for="slide in project.pictureList" :key="slide">
               <div class="pa-5">
-                <!-- <v-img :class="['align-center position-absolute']" :src="slide" :alt="project.pictureAlt" /> -->
-                <v-img height="440" src="../assets/blackball.png"></v-img>
+                <v-img height="440" :src="slide" :alt="project.pictureAlt" />
+                <!-- <v-img height="440" src="../assets/blackball.png"></v-img> -->
               </div>
             </v-carousel-item>
           </v-carousel>
