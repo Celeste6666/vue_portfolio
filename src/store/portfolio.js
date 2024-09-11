@@ -68,8 +68,8 @@ const data = [
       <p>This platform helps businesses track, record, and manage their carbon emissions data while providing robust data management and analysis tools.</p>
       <p>My contributions to this project include:</p>
         <ul>
-          <li><span class="font-weight-bold">Overall Architecture Design and Planning:</span>: Led the initial planning and design of the code architecture, focusing on extensible modules and configurable settings.</li>
-      <li><span class="font-weight-bold">API Development Support:</span>: Collaborated with a team of three backend engineers to develop APIs.
+          <li><span class="font-weight-bold">Overall Architecture Design and Planning</span>: Led the initial planning and design of the code architecture, focusing on extensible modules and configurable settings.</li>
+      <li><span class="font-weight-bold">API Development Support</span>: Collaborated with a team of three backend engineers to develop APIs.
 </li>
         </ul>
         `,
@@ -97,8 +97,8 @@ const data = [
       <p>Built on the integration of IoT and IIoT technologies, this platform provides a comprehensive real-time management and monitoring solution, delivering efficient and intelligent operational results.</p>
       <p>My contributions to this project include:</p>
         <ul>
-      <li><span class="font-weight-bold">Overall Architecture Design and Planning:</span>: Implementing a modular architecture increasing the reusability of components and independently completed the project setup and deployment within three months.</li>
-      <li><span class="font-weight-bold">API Development Support:</span>: Collaborated with backend engineers to develop APIs.</li>
+      <li><span class="font-weight-bold">Overall Architecture Design and Planning</span>: Implementing a modular architecture increasing the reusability of components and independently completed the project setup and deployment within three months.</li>
+      <li><span class="font-weight-bold">API Development Support</span>: Collaborated with backend engineers to develop APIs.</li>
       <li><span class="font-weight-bold">Integration of BIM Model for 3D Visualization</span>: Developed 3D visualization pages using Autodesk Forge to load 3D models and temperature heat maps.</li>
     </ul>`,
     type: "Web",
@@ -126,7 +126,7 @@ const data = [
     <p>We developed software in collaboration with Mitsubishi Electric to monitor elevator status and provide real-time alerts for anomalies, enhancing passenger safety. </p>
     <p>My contributions to this project include:</p>
     <ul>
-      <li><span class="font-weight-bold">Overall Architecture Design and Planning:</span>: Implementing a modular architecture increasing the reusability of components and independently completed the project setup and deployment within one months.</li>
+      <li><span class="font-weight-bold">Overall Architecture Design and Planning</span>: Implementing a modular architecture increasing the reusability of components and independently completed the project setup and deployment within one months.</li>
       <li><span class="font-weight-bold">Integration with Niagara 4 for Equipment Status Retrieval</span>: Utilized Obix and BajaScript to obtain real-time information, detect anomalies, and access historical data.</li>
     </ul>`,
     type: "Web",
